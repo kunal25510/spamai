@@ -20,17 +20,21 @@ if not os.path.exists(MODEL_PATH):
 model = joblib.load(MODEL_PATH)
 
 
-# ==========================================
-# PREDICTION API
-# ==========================================
-
-@app.route("/predict", methods=["POST"])
-def predict():
-    data = request.json or {}
-    email_text = data.get("text", "")
-
+def process_email_text(email_text):
     if not email_text:
-        return jsonify({"error": "Email text is required"}), 400
+        return {
+            "ml_prediction": "safe",
+            "ml_confidence": 0,
+            "phishing_probability": 0,
+            "facts": [],
+            "derived_facts": [],
+            "rule_phishing": False,
+            "bayes_risk": 0,
+            "fuzzy_score": 0,
+            "fuzzy_level": "LOW",
+            "final_score": 0,
+            "final_risk": "low"
+        }
 
     # ======================================
     # 1. MACHINE LEARNING
@@ -94,12 +98,7 @@ def predict():
     else:
         final_risk = "low"
 
-
-
-    # ======================================
-    # RESPONSE
-    # ======================================
-    return jsonify({
+    return {
         "ml_prediction": prediction,
         "ml_confidence": round(confidence, 2),
         "phishing_probability": phish_prob,
@@ -111,16 +110,49 @@ def predict():
         "fuzzy_level": fuzzy_level,
         "final_score": final_score,
         "final_risk": final_risk
-    })
+    }
 
 
 # ==========================================
-# HOME
+# PREDICTION API
+# ==========================================
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = request.json or {}
+    email_text = data.get("text", "")
+
+    if not email_text:
+        return jsonify({"error": "Email text is required"}), 400
+
+    result = process_email_text(email_text)
+    return jsonify(result)
+
+
+@app.route("/predict_batch", methods=["POST"])
+def predict_batch():
+    data = request.json or {}
+    items = data.get("items", [])
+
+    results = []
+    for item in items:
+        item_id = item.get("id")
+        text = item.get("text", "")
+        res = process_email_text(text)
+        res["id"] = item_id
+        results.append(res)
+
+    return jsonify({"results": results})
+
+
+# ==========================================
+# HOME & HEALTH
 # ==========================================
 
 @app.route("/", methods=["GET"])
+@app.route("/health", methods=["GET"])
 def home():
-    return "AI Security Server Running"
+    return jsonify({"status": "ok", "message": "AI Security Server Running"})
 
 
 # ==========================================
@@ -130,5 +162,6 @@ def home():
 if __name__ == "__main__":
     app.run(
         host="127.0.0.1",
-        port=8000
+        port=8000,
+        threaded=True
     )

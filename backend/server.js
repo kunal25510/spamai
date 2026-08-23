@@ -116,11 +116,19 @@ function analyzeEmail(email) {
 }
 
 // ==================================================
-// HOME ROUTE
+// HOME & HEALTH ROUTES
 // ==================================================
 
 app.get("/", (req, res) => {
     res.send("Personal Security Agent Backend Running");
+});
+
+app.get("/api/health", (req, res) => {
+    res.json({
+        status: "ok",
+        uptime: process.uptime(),
+        timestamp: new Date().toISOString()
+    });
 });
 
 // ==================================================
@@ -217,95 +225,101 @@ app.get("/api/emails", async (req, res) => {
 
         const messages = listResponse.data.messages || [];
 
-        // Parallel processing of emails for high speed
-        const emailPromises = messages.map(async (msg) => {
-            try {
-                const emailRes = await gmail.users.messages.get({
-                    userId: "me",
-                    id: msg.id,
-                    format: "metadata",
-                    metadataHeaders: ["From", "Subject", "Date"]
-                });
-
-                const headers = emailRes.data.payload?.headers || [];
-                const from = headers.find(h => h.name === "From")?.value || "Unknown";
-                const subject = headers.find(h => h.name === "Subject")?.value || "No Subject";
-                const date = headers.find(h => h.name === "Date")?.value || "";
-                const snippet = emailRes.data.snippet || "";
-
-                // Local rule engine analysis
-                const security = analyzeEmail({ from, subject, snippet });
-
-                // Python AI Server Evaluation
-                let aiResult = {
-                    prediction: "safe",
-                    confidence: 0,
-                    ml_prediction: "safe",
-                    ml_confidence: 0,
-                    phishing_probability: 0,
-                    bayes_risk: 0,
-                    fuzzy_score: 0,
-                    fuzzy_level: "LOW",
-                    rule_phishing: false,
-                    final_risk: "low",
-                    final_score: 0
-                };
-
+        // 1. Parallel fetch email headers from Gmail API
+        const rawEmails = await Promise.all(
+            messages.map(async (msg) => {
                 try {
-                    const aiResponse = await axios.post(
-                        "http://127.0.0.1:8000/predict",
-                        { text: `${subject} ${snippet}` },
-                        { timeout: 4000 }
-                    );
-                    aiResult = aiResponse.data || {};
+                    const emailRes = await gmail.users.messages.get({
+                        userId: "me",
+                        id: msg.id,
+                        format: "metadata",
+                        metadataHeaders: ["From", "Subject", "Date"]
+                    });
+
+                    const headers = emailRes.data.payload?.headers || [];
+                    const from = headers.find(h => h.name === "From")?.value || "Unknown";
+                    const subject = headers.find(h => h.name === "Subject")?.value || "No Subject";
+                    const date = headers.find(h => h.name === "Date")?.value || "";
+                    const snippet = emailRes.data.snippet || "";
+
+                    return { id: msg.id, from, subject, date, snippet };
                 } catch (err) {
-                    console.log(`[AI Server Offline] ${err.message}`);
+                    console.error(`Failed to fetch email metadata ${msg.id}:`, err.message);
+                    return null;
                 }
+            })
+        );
 
-                // Final risk determination prioritizing Python AI decisions
-                const finalRisk = (aiResult && aiResult.final_risk)
-                    ? aiResult.final_risk.toUpperCase()
-                    : security.risk;
+        const validRawEmails = rawEmails.filter(Boolean);
 
-                const finalScore = (aiResult && aiResult.final_score !== undefined)
-                    ? Math.round(aiResult.final_score)
-                    : security.score;
-
-                const mlPrediction = String(
-                    aiResult.ml_prediction || aiResult.prediction || "safe"
-                ).toLowerCase();
-
-                const mlConfidence = Number(
-                    aiResult.phishing_probability ??
-                    aiResult.ml_confidence ??
-                    aiResult.confidence ?? 0
-                );
-
-                return {
-                    id: msg.id,
-                    from,
-                    subject,
-                    date,
-                    snippet,
-                    risk: finalRisk,
-                    score: security.score,
-                    reasons: security.reasons,
-                    aiPrediction: mlPrediction,
-                    aiConfidence: mlConfidence,
-                    bayesRisk: Number(aiResult.bayes_risk || 0),
-                    fuzzyScore: Number(aiResult.fuzzy_score || 0),
-                    fuzzyLevel: aiResult.fuzzy_level || "LOW",
-                    rulePhishing: aiResult.rule_phishing === true,
-                    finalScore
+        // 2. High-speed Batch Request to Python AI Server
+        const aiResultsMap = {};
+        if (validRawEmails.length > 0) {
+            try {
+                const batchPayload = {
+                    items: validRawEmails.map(e => ({
+                        id: e.id,
+                        text: `${e.subject} ${e.snippet}`
+                    }))
                 };
+                const aiResponse = await axios.post(
+                    "http://127.0.0.1:8000/predict_batch",
+                    batchPayload,
+                    { timeout: 5000 }
+                );
+                if (aiResponse.data && Array.isArray(aiResponse.data.results)) {
+                    aiResponse.data.results.forEach(resItem => {
+                        if (resItem.id) {
+                            aiResultsMap[resItem.id] = resItem;
+                        }
+                    });
+                }
             } catch (err) {
-                console.error(`Failed to process email ${msg.id}:`, err.message);
-                return null;
+                console.log(`[AI Server Batch Offline/Error] ${err.message}`);
             }
-        });
+        }
 
-        const results = await Promise.all(emailPromises);
-        const emails = results.filter(e => e !== null);
+        // 3. Process email results with local fallback if needed
+        const emails = validRawEmails.map((e) => {
+            const security = analyzeEmail({ from: e.from, subject: e.subject, snippet: e.snippet });
+            const aiResult = aiResultsMap[e.id] || {};
+
+            const finalRisk = (aiResult && aiResult.final_risk)
+                ? aiResult.final_risk.toUpperCase()
+                : security.risk;
+
+            const finalScore = (aiResult && aiResult.final_score !== undefined)
+                ? Math.round(aiResult.final_score)
+                : security.score;
+
+            const mlPrediction = String(
+                aiResult.ml_prediction || aiResult.prediction || "safe"
+            ).toLowerCase();
+
+            const mlConfidence = Number(
+                aiResult.phishing_probability ??
+                aiResult.ml_confidence ??
+                aiResult.confidence ?? 0
+            );
+
+            return {
+                id: e.id,
+                from: e.from,
+                subject: e.subject,
+                date: e.date,
+                snippet: e.snippet,
+                risk: finalRisk,
+                score: security.score,
+                reasons: security.reasons,
+                aiPrediction: mlPrediction,
+                aiConfidence: mlConfidence,
+                bayesRisk: Number(aiResult.bayes_risk || 0),
+                fuzzyScore: Number(aiResult.fuzzy_score || 0),
+                fuzzyLevel: aiResult.fuzzy_level || "LOW",
+                rulePhishing: aiResult.rule_phishing === true,
+                finalScore
+            };
+        });
 
         res.json({
             connected: true,

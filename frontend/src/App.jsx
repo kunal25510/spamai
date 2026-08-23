@@ -63,22 +63,27 @@ function App() {
   }, [connected]);
 
   // =================================================
-  // CHECK GMAIL CONNECTION
+  // CHECK GMAIL CONNECTION & HEALTH
   // =================================================
 
-  async function checkAccount(silent = false) {
+  async function checkAccount(silent = false, retries = 2) {
     try {
       if (!silent) {
         setLoading(true);
         setError("");
       }
 
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+
       const response = await fetch(
         `${API}/api/account?_t=${Date.now()}`,
         {
-          cache: "no-store"
+          cache: "no-store",
+          signal: controller.signal
         }
       );
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         throw new Error("Cannot connect to security backend.");
@@ -97,8 +102,12 @@ function App() {
       }
     } catch (err) {
       console.error("Account check error:", err);
+      if (retries > 0) {
+        await new Promise((r) => setTimeout(r, 1200));
+        return checkAccount(silent, retries - 1);
+      }
       if (!silent) {
-        setError("Cannot connect to security backend.");
+        setError("Cannot connect to security backend. Please ensure the backend service is running.");
       }
     } finally {
       if (!silent) {
@@ -119,17 +128,22 @@ function App() {
       if (!silent) setLoading(true);
       if (!silent) setError("");
 
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+
       const response = await fetch(
         `${API}/api/emails?_t=${Date.now()}`,
         {
           method: "GET",
           cache: "no-store",
+          signal: controller.signal,
           headers: {
             "Cache-Control": "no-cache",
             "Pragma": "no-cache"
           }
         }
       );
+      clearTimeout(timeoutId);
 
       const data = await response.json();
 
