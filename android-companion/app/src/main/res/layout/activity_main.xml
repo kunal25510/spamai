@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0F12"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SENTINEL AI"
+            android:textColor="#CBD3D8"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Companion &amp; SMS Scam Defense"
+            android:textColor="#7A8793"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Notification Access Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#12161A"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. SYSTEM PERMISSION"
+                android:textColor="#596570"
+                android:textSize="10sp"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/txtNotifStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checking permission..."
+                android:textColor="#FFB86C"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allows Sentinel to inspect incoming SMS notifications without changing your default SMS app."
+                android:textColor="#828F99"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnGrantNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grant Notification Access"
+                android:backgroundTint="#242B32"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Server Configuration Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#12161A"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. BACKEND CONNECTION"
+                android:textColor="#596570"
+                android:textSize="10sp"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Backend Server URL"
+                android:textColor="#CBD3D8"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/editServerUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="http://192.168.1.100:5000"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#4B5660"
+                android:textSize="13sp"
+                android:inputType="textUri" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Pairing Key"
+                android:textColor="#CBD3D8"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/editPairingKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="sentinel_pair_xxxx"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#4B5660"
+                android:textSize="13sp"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnSaveConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Configuration"
+                android:backgroundTint="#242B32"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Protection Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#12161A"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <Switch
+                android:id="@+id/switchMonitoring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Automatic Scam Detection"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incoming SMS messages will be evaluated in real-time. You will receive immediate alerts for phishing and financial fraud."
+                android:textColor="#7A8793"
+                android:textSize="11sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- Test Connection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#12161A"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnTestConnection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Connection to Sentinel"
+                android:backgroundTint="#313942"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtTestResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

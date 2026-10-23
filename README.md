@@ -77,18 +77,111 @@ Here is a clear breakdown of every file in the project and what method it uses:
 
 ---
 
-## ⚖️ How Sentinel Avoids Errors
+## 🚀 Sentinel AI: Automatic Multi-Channel Scam Defense
 
-1. **How it stops False Positives (Good emails marked bad):**
-   - Legitimate emails like **Google Security Alerts**, **IPPB Banking**, or **ZeroSSL** contain words like "security" or "account".
-   - Sentinel has a **Trusted Service Whitelist** (`ai/ai_server.py`). If the sender is official Google or IPPB, Sentinel immediately knows it's genuine and flags it **LOW RISK**.
-
-2. **How it stops False Negatives (Bad emails marked good):**
-   - Fake "Document Access" emails say *"Click here to view document"*.
-   - Even if the AI model is uncertain, `security_rules.py` detects the combination of `link` + `document sign-in lure` and forces the risk to **HIGH**.
+Sentinel is an automated scam detection system that continuously monitors your **Gmail inbox** and **Android smartphone SMS messages** in real time, alerting you to fraudulent lures, fake bank KYC threats, and credential phishing attempts.
 
 ---
 
-## 🚀 Summary
+## 🏗️ Architecture & Component Roles
 
-Sentinel uses a **hybrid approach** (Rules + Machine Learning + Whitelists + Fuzzy Logic) so it acts like a smart human security expert: quick, accurate, and reliable.
+```
+ ┌──────────────────────────────────────────────────────────────┐
+ │                      SENTINEL DASHBOARD                      │
+ │                 React + Vite (localhost:5173)                │
+ └──────────────┬───────────────────────────────▲───────────────┘
+                │                               │
+                ▼                               │ Live Feed / Alerts
+ ┌──────────────────────────────────────────────┴───────────────┐
+ │               SENTINEL API GATEWAY & MONITOR                 │
+ │                  Node.js (localhost:5000)                    │
+ │  • Auto-polls Gmail inbox (every 20s, deduplicates IDs)     │
+ │  • Ingests incoming SMS from Android Companion               │
+ │  • Handles Phone OTP verification & Device Pairing Key       │
+ └──────────────┬───────────────────────────────▲───────────────┘
+                │                               │
+                ▼                               │ Verdict: LOW / MED / HIGH
+ ┌──────────────────────────────────────────────┴───────────────┐
+ │                  HYBRID AI SECURITY ENGINE                   │
+ │                 Python Flask (localhost:8000)                │
+ │  • TF-IDF Vectorizer + Logistic Regression Model             │
+ │  • Forward-Chaining Security Expert Rules                    │
+ │  • Bayesian Risk Probability Model                           │
+ │  • Fuzzy Logic Uncertainty Engine                            │
+ │  • Safe Offline URL Analysis (urllib local parser)           │
+ └──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🔑 Google Cloud Console & Gmail API Configuration
+
+To enable automatic Gmail inbox scanning:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create or select a project.
+3. Enable the **Gmail API**:
+   - Navigate to **APIs & Services > Library**.
+   - Search for **Gmail API** and click **Enable**.
+4. Configure the **OAuth Consent Screen**:
+   - Choose **External** user type.
+   - Enter your App name (e.g., `Sentinel AI`) and your developer email.
+   - Under **Scopes**, add `https://www.googleapis.com/auth/gmail.readonly`.
+   - Under **Test Users**, add your personal Gmail address.
+5. Create OAuth Credentials:
+   - Go to **APIs & Services > Credentials > Create Credentials > OAuth Client ID**.
+   - Application type: **Web application**.
+   - Authorized redirect URIs: `http://localhost:5000/auth/google/callback`.
+6. Copy your **Client ID** and **Client Secret** into `backend/.env`:
+   ```ini
+   GOOGLE_CLIENT_ID=your_id.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=your_client_secret
+   GOOGLE_REDIRECT_URI=http://localhost:5000/auth/google/callback
+   ```
+
+### 🔒 Privacy & Permissions Guarantee
+- **Read-Only:** Sentinel only requests `gmail.readonly`. It can never send, delete, or modify emails.
+- **No Password Access:** Sentinel uses Google OAuth 2.0 temporary tokens. It never sees or stores your Google password.
+- **Disconnect & Revoke:**
+  - Click **Disconnect** in Sentinel anytime to delete tokens from the server.
+  - Revoke permissions directly from your Google Account at [Google Account Permissions](https://myaccount.google.com/permissions).
+
+---
+
+## 📱 Automatic SMS Scam Detection (Android Companion)
+
+Sentinel includes a native Android companion app located in [`android-companion/`](file:///c:/Users/Bhushan/Desktop/spamAI/spamai/android-companion/README.md).
+
+### How it Works:
+1. **Notification Access (`NotificationListenerService`)**:
+   - Google Play restricts `RECEIVE_SMS` to default SMS apps. Sentinel uses Android's compliant `NotificationListenerService` instead.
+   - You keep your favorite SMS app (Google Messages, Samsung Messages, Truecaller).
+   - When an SMS arrives, Sentinel intercepts the notification, extracts sender & text, and forwards it to your Sentinel backend (`POST /api/sms/ingest`).
+2. **Instant Threat Alert**:
+   - If the AI engine flags the SMS as **HIGH** or **MEDIUM** risk, your phone immediately triggers a high-priority heads-up notification:
+     *🚨 CRITICAL SCAM DETECTED: Bank KYC threat from VK-SBIINB*.
+3. **Interactive Simulator**:
+   - Don't have an Android device nearby? Test the defense live using the **Interactive SMS Simulator** on the Sentinel dashboard with 1 click!
+
+---
+
+## 💻 Operating Environment & Background Monitoring
+
+- **Local Execution:** Automatic background polling and SMS ingestion continue actively as long as your Sentinel backend service is running on your computer.
+- **Continuous 24/7 Deployment:** For non-stop monitoring when your PC is turned off, the backend and AI server can be deployed to any low-cost VPS (AWS EC2, DigitalOcean, or Render) with an HTTPS reverse proxy.
+
+---
+
+## 🚀 How to Run the Application
+
+Run all three components simultaneously:
+
+```bash
+cd spamai
+npm run start-all
+```
+
+- **Web Dashboard:** `http://localhost:5173`
+- **Backend Gateway:** `http://localhost:5000`
+- **AI Decision Node:** `http://127.0.0.1:8000`
+

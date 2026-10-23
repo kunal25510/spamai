@@ -881,6 +881,510 @@ h1 {
 }
 
 
+/* AUTOMATIC SCAM DETECTION OPERATIONS DASHBOARD */
+
+.nodes-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.node-status-card {
+  border: 1px solid #242a30;
+  background: #0c0f12;
+  padding: 20px 22px;
+  border-radius: 2px;
+}
+
+.node-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.node-icon-box {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #2b333a;
+  background: #12161a;
+  display: grid;
+  place-items: center;
+  color: #a8b4bc;
+}
+
+.node-card-header h4 {
+  margin: 0;
+  font: 11px "DM Mono", monospace;
+  letter-spacing: .12em;
+  color: #edf2f5;
+}
+
+.node-sub {
+  font-size: 10px;
+  color: #66727d;
+}
+
+.status-pill {
+  margin-left: auto;
+  font: 9px "DM Mono", monospace;
+  letter-spacing: .08em;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.pill-active {
+  background: rgba(80, 250, 123, 0.12);
+  color: #50fa7b;
+  border: 1px solid rgba(80, 250, 123, 0.3);
+}
+
+.pill-idle {
+  background: rgba(102, 114, 125, 0.12);
+  color: #8a97a2;
+  border: 1px solid #283038;
+}
+
+.node-desc {
+  font-size: 11px;
+  color: #8a959e;
+  line-height: 1.6;
+  margin: 12px 0 16px;
+}
+
+.node-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-sm {
+  height: 32px;
+  padding: 0 14px;
+  font-size: 10px;
+  letter-spacing: .06em;
+}
+
+.btn-danger-text {
+  color: #c58d8d !important;
+}
+
+.btn-danger-bg {
+  background: #3d1a1a !important;
+  border-color: #632d2d !important;
+  color: #f8b4b4 !important;
+}
+
+.metric-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-icon-muted {
+  color: #525e68;
+}
+
+/* FEED & LIVE THREAT STREAM */
+
+.feed-filter-bar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.feed-pill {
+  border: 1px solid #232930;
+  background: #111519;
+  color: #79838c;
+  padding: 5px 12px;
+  font-size: 11px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .15s ease;
+}
+
+.feed-pill:hover {
+  background: #161b20;
+  color: #d8e0e5;
+}
+
+.feed-pill.active {
+  background: #192027;
+  color: #edf2f5;
+  border-color: #4b5867;
+}
+
+.activity-feed-container {
+  padding: 16px 22px;
+}
+
+.feed-empty-state {
+  padding: 48px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #6d7983;
+}
+
+.feed-empty-state h4 {
+  margin: 8px 0 0;
+  color: #c2cacf;
+  font-size: 15px;
+}
+
+.feed-empty-state p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.feed-card {
+  border: 1px solid #20262c;
+  background: #090c0f;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color .15s ease;
+}
+
+.feed-card:hover {
+  border-color: #38434e;
+}
+
+.feed-card.card-high {
+  border-left: 3px solid #c58d8d;
+}
+
+.feed-card.card-medium {
+  border-left: 3px solid #d4a359;
+}
+
+.feed-card.card-low {
+  border-left: 3px solid #50fa7b;
+}
+
+.feed-card-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+}
+
+.feed-source-badge {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #283038;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.feed-source-badge.email {
+  color: #8be9fd;
+  background: rgba(139, 233, 253, 0.05);
+}
+
+.feed-source-badge.sms {
+  color: #bd93f9;
+  background: rgba(189, 147, 249, 0.05);
+}
+
+.feed-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed-card-title-row strong {
+  font-size: 12px;
+  color: #dce3e7;
+}
+
+.feed-timestamp {
+  font: 10px "DM Mono", monospace;
+  color: #5f6b74;
+}
+
+.feed-sender {
+  font-size: 10px;
+  color: #73808a;
+  display: block;
+  margin-top: 2px;
+}
+
+.feed-preview {
+  font-size: 11px;
+  color: #9aa6af;
+  margin: 4px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feed-card-risk {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.feed-expand-chevron {
+  color: #5a6671;
+  transition: transform .2s ease;
+}
+
+.feed-expand-chevron.rotated {
+  transform: rotate(90deg);
+}
+
+.feed-card-details {
+  border-top: 1px solid #1a2025;
+  padding: 14px 18px;
+  background: #0e1215;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.details-score-label {
+  font: 10px "DM Mono", monospace;
+  color: #7c8892;
+}
+
+.details-score-label strong {
+  color: #e0e6eb;
+}
+
+.details-reasons-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.details-reasons-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: #adb8bf;
+  line-height: 1.5;
+}
+
+.details-reasons-preview {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.reason-tag {
+  font-size: 10px;
+  color: #8f9da7;
+  background: #12161a;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid #232a31;
+}
+
+.reason-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c58d8d;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.card-low .reason-dot {
+  background: #50fa7b;
+}
+
+.card-medium .reason-dot {
+  background: #d4a359;
+}
+
+/* PHONE DEFENSE & PAIRING PAGE */
+
+.phone-defense-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.phone-panel-body {
+  padding: 26px;
+}
+
+.phone-setup-step {
+  display: flex;
+  gap: 18px;
+}
+
+.step-num-badge {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #35404b;
+  display: grid;
+  place-items: center;
+  font: 12px "DM Mono", monospace;
+  color: #8be9fd;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #dbe2e6;
+  font-weight: 500;
+}
+
+.step-desc {
+  margin: 0 0 16px;
+  font-size: 11px;
+  color: #75828d;
+  line-height: 1.6;
+}
+
+.phone-input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.dev-otp-callout {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: rgba(139, 233, 253, 0.08);
+  border: 1px solid rgba(139, 233, 253, 0.25);
+  color: #8be9fd;
+  font-size: 11px;
+}
+
+.verified-status-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #101518;
+  border: 1px solid #232c33;
+}
+
+.verified-status-row strong {
+  display: block;
+  font-size: 14px;
+  color: #edf2f6;
+}
+
+.verified-status-row span {
+  font-size: 11px;
+  color: #76838e;
+}
+
+.verified-status-row button {
+  margin-left: auto;
+}
+
+.pairing-creds-card {
+  background: #101418;
+  border: 1px solid #232c33;
+  padding: 18px 20px;
+}
+
+.cred-label {
+  display: block;
+  font: 9px "DM Mono", monospace;
+  color: #67747e;
+  letter-spacing: .1em;
+}
+
+.cred-value {
+  display: block;
+  margin-top: 4px;
+  font: 12px "DM Mono", monospace;
+  color: #50fa7b;
+}
+
+.cred-key {
+  word-break: break-all;
+}
+
+.key-copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.simulator-presets-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preset-btn {
+  border: 1px solid #2a333c;
+  background: #13181d;
+  color: #a2afb8;
+  padding: 8px 14px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.preset-btn:hover {
+  background: #1c232a;
+  color: #fff;
+  border-color: #4a5765;
+}
+
+.top-sync-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #262e36;
+  display: grid;
+  place-items: center;
+  color: #9aa5ae;
+  background: #101418;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.top-sync-btn:hover {
+  color: #fff;
+  border-color: #424e5a;
+}
+
+.success-alert {
+  border: 1px solid #285437;
+  background: #0d1a12;
+  color: #7ce79f;
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width: 1000px) {
@@ -893,7 +1397,8 @@ h1 {
     padding: 25px;
   }
 
-  .content-grid {
+  .content-grid,
+  .nodes-overview-grid {
     grid-template-columns: 1fr;
   }
 

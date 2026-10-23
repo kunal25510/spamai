@@ -9,6 +9,8 @@ venv/
 .env
 *.env
 .env.local
+.sentinel_store.json
+*.tokens.json
 
 # Python cache
 __pycache__/
