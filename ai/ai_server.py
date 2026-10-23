@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify
+import warnings
+warnings.filterwarnings("ignore")
 import joblib
 import os
 from security_rules import extract_facts, forward_chain
 from bayes_risk import calculate_bayes_risk
 from fuzzy_risk import calculate_fuzzy_risk
+from url_analyzer import analyze_url
+from message_rules import analyze_general_message, analyze_job_offer, analyze_github_linkedin
 
 app = Flask(__name__)
 
@@ -113,8 +117,106 @@ def process_email_text(email_text):
     }
 
 
+def analyze_email_unified(email_text):
+    res = process_email_text(email_text)
+    derived = res.get("derived_facts", [])
+    facts = res.get("facts", [])
+    ml_prob = res.get("phishing_probability", 0)
+    score = int(round(res.get("final_score", 0)))
+    risk_level = res.get("final_risk", "low").upper()
+
+    reasons = []
+    if "credential_phishing" in derived:
+        reasons.append("Credential phishing pattern: combines suspicious link with password/login request.")
+    elif "asks_password" in facts:
+        reasons.append("Prompts recipient for password, credentials, or login confirmation.")
+
+    if "financial_phishing" in derived:
+        reasons.append("Financial phishing pattern: combines monetary scam lure with link or password request.")
+    elif "financial_scam" in facts:
+        reasons.append("Promises lottery winnings, prize rewards, or cash payouts.")
+
+    if "suspicious_email" in derived or ("urgent_language" in facts and "account_threat" in facts):
+        reasons.append("High-pressure coercion: combines urgent deadlines with account suspension threats.")
+    elif "urgent_language" in facts:
+        reasons.append("Uses urgent or coercive phrasing to pressure immediate action.")
+    elif "account_threat" in facts:
+        reasons.append("Threatens account deactivation, block, or penalties.")
+
+    if "suspicious_link" in facts:
+        reasons.append("Contains suspicious, shortened, or unverified web links.")
+
+    if ml_prob >= 60:
+        reasons.append(f"Machine learning model flagged statistical scam patterns ({ml_prob}% probability).")
+
+    if "legitimate_notification" in derived or ("trusted_service" in facts and not res.get("rule_phishing")):
+        reasons.append("Matches verified sender pattern from recognized provider (e.g. Google, IPPB).")
+
+    if not reasons:
+        reasons.append("No typical phishing indicators, credential traps, or urgent threats detected.")
+
+    if risk_level == "HIGH":
+        msg = "High risk: Email contains strong indicators of credential theft, urgency coercion, or fraud."
+    elif risk_level == "MEDIUM":
+        msg = "Medium risk: Caution advised due to embedded links, urgency, or unfamiliar requests."
+    else:
+        msg = "Low risk: Email appears routine with no severe phishing or threat indicators detected."
+
+    return {
+        "risk_level": risk_level,
+        "risk_score": score,
+        "reasons": reasons,
+        "message": msg,
+        "analysis_type": "email",
+        "details": {
+            "ml_probability": ml_prob,
+            "bayes_risk": res.get("bayes_risk"),
+            "fuzzy_score": res.get("fuzzy_score"),
+            "rule_phishing": res.get("rule_phishing"),
+            "disclaimer": "Hybrid AI check (ML + Bayesian + Fuzzy + Heuristics). Never share passwords via email."
+        }
+    }
+
+
 # ==========================================
-# PREDICTION API
+# UNIFIED MULTI-MODE ANALYSIS API
+# ==========================================
+
+@app.route("/analyze", methods=["POST"])
+def analyze():
+    data = request.json or {}
+    mode = data.get("type", "message").lower()
+    text = data.get("text", "")
+    url = data.get("url", "")
+
+    target_input = url if (mode == "url" and url) else text
+    if not target_input and mode == "url" and text:
+        target_input = text
+
+    if not target_input or not target_input.strip():
+        return jsonify({"error": "Please provide input text or a URL to analyze."}), 400
+
+    if len(target_input) > 20000:
+        return jsonify({"error": "Input length exceeds the 20,000 characters limit."}), 400
+
+    if mode == "url":
+        result = analyze_url(target_input)
+    elif mode == "job":
+        result = analyze_job_offer(target_input)
+    elif mode == "github_linkedin":
+        result = analyze_github_linkedin(target_input)
+    elif mode == "email":
+        result = analyze_email_unified(target_input)
+    elif mode in ["message", "messages"]:
+        result = analyze_general_message(target_input)
+    else:
+        return jsonify({"error": f"Unsupported analysis mode: {mode}"}), 400
+
+    return jsonify(result)
+
+
+# ==========================================
+# LEGACY EMAIL PREDICTION APIs (Preserved)
 # ==========================================
 
 @app.route("/predict", methods=["POST"])
@@ -164,4 +266,4 @@ if __name__ == "__main__":
         host="127.0.0.1",
         port=8000,
         threaded=True
-    )
+    )

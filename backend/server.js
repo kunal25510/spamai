@@ -334,6 +334,81 @@ app.get("/api/emails", async (req, res) => {
 });
 
 // ==================================================
+// API: MULTI-MODE MESSAGE & URL ANALYSIS
+// ==================================================
+
+const ALLOWED_TYPES = ["email", "message", "job", "github_linkedin", "url"];
+
+app.post("/api/analyze", async (req, res) => {
+    try {
+        const body = req.body || {};
+        const type = (body.type || "message").toLowerCase();
+        const text = typeof body.text === "string" ? body.text.trim() : "";
+        const url = typeof body.url === "string" ? body.url.trim() : "";
+
+        if (!ALLOWED_TYPES.includes(type)) {
+            return res.status(400).json({
+                error: `Invalid analysis type '${type}'. Allowed types: ${ALLOWED_TYPES.join(", ")}`
+            });
+        }
+
+        const inputToAnalyze = type === "url" ? (url || text) : text;
+
+        if (!inputToAnalyze) {
+            return res.status(400).json({
+                error: type === "url"
+                    ? "Please provide a valid URL to analyze."
+                    : "Please enter or paste the message text to analyze."
+            });
+        }
+
+        if (inputToAnalyze.length > 15000) {
+            return res.status(400).json({
+                error: "Input text exceeds maximum allowed length of 15,000 characters."
+            });
+        }
+
+        // Send to Python AI engine
+        try {
+            const aiResponse = await axios.post(
+                "http://127.0.0.1:8000/analyze",
+                {
+                    type,
+                    text: inputToAnalyze,
+                    url: inputToAnalyze
+                },
+                { timeout: 8000 }
+            );
+
+            return res.json(aiResponse.data);
+        } catch (aiErr) {
+            console.error("[AI Analysis Error]:", aiErr.message);
+
+            if (aiErr.code === "ECONNREFUSED" || aiErr.code === "ETIMEDOUT") {
+                return res.status(503).json({
+                    error: "AI Security Engine is offline or unreachable. Please verify that the Python AI server is running on port 8000."
+                });
+            }
+
+            if (aiErr.response && aiErr.response.data && aiErr.response.data.error) {
+                return res.status(aiErr.response.status || 400).json({
+                    error: aiErr.response.data.error
+                });
+            }
+
+            return res.status(500).json({
+                error: "Failed to complete security analysis due to an internal AI engine error."
+            });
+        }
+    } catch (err) {
+        console.error("Analysis route error:", err.message);
+        return res.status(500).json({
+            error: "An unexpected error occurred while processing the request."
+        });
+    }
+});
+
+// ==================================================
 // START SERVER
 // ==================================================
 

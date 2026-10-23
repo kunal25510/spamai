@@ -64,9 +64,11 @@ Here is a clear breakdown of every file in the project and what method it uses:
 
 | File Name | Method / Component | Simple Explanation |
 | :--- | :--- | :--- |
-| `frontend/src/App.jsx` | **User Interface (React)** | Displays the dashboard, live threat list, security score counter, and buttons. |
-| `backend/server.js` | **Gateway & API Server (Node.js)** | Connects to Gmail, pulls emails fast using `Promise.all`, and sends text to the Python AI. |
-| `ai/ai_server.py` | **Master Decision Server (Python Flask)** | Receives email text, calls all AI methods, checks trusted Whitelists, and makes the final decision. |
+| `frontend/src/App.jsx` | **User Interface (React)** | Displays dashboard, Gmail scan status, and the 5-mode Threat Detection Workbench. |
+| `backend/server.js` | **Gateway & API Server (Node.js)** | Connects to Gmail, validates inputs, and exposes `/api/analyze` to dispatch requests to the AI engine. |
+| `ai/ai_server.py` | **Master Decision Server (Python Flask)** | Orchestrates multi-mode `/analyze`, batch predictions, and hybrid scoring. |
+| `ai/url_analyzer.py` | **Safe Local URL Analyzer (Python)** | Parses URLs offline with `urllib`, checking lookalikes, IP hosts, shorteners, and credential paths without remote requests. |
+| `ai/message_rules.py` | **Multi-Platform Heuristic Rules** | Detects SMS/WhatsApp scams, fake job registration fees, and GitHub/LinkedIn malicious script lures. |
 | `ai/security_rules.py` | **Rule-Based System (Forward Chaining)** | Looks for keyword traps like *"sign in"*, *"confirm access"*, *"account suspended"*, and suspicious `http://` links. |
 | `ai/train_model.py` | **Machine Learning Trainer** | Teaches the AI using past scam emails. Uses **Logistic Regression** and **TF-IDF** word patterns. |
 | `ai/predict.py` | **Machine Learning Classifier** | Takes a new email and gives an ML score (e.g., 85% probability it is phishing). |
