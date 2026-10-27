@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Backgrounds & Surfaces -->
+    <color name="bg_app">#F8FAFC</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_subtle">#F0F6FE</color>
+    <color name="bg_card_secondary">#F1F5F9</color>
+    
+    <!-- Borders & Dividers -->
+    <color name="border_subtle">#E2E8F0</color>
+    <color name="border_card">#EDF2F7</color>
+    <color name="border_focused">#2563EB</color>
+    <color name="divider">#E2E8F0</color>
+
+    <!-- Primary Accent (Royal Blue) -->
+    <color name="primary_blue">#2563EB</color>
+    <color name="primary_blue_dark">#1D4ED8</color>
+    <color name="primary_blue_light">#EFF6FF</color>
+    <color name="primary_blue_tint">#DBEAFE</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_link">#2563EB</color>
+
+    <!-- Semantic Status: Green (Healthy / Safe / Legitimate) -->
+    <color name="status_green">#10B981</color>
+    <color name="status_green_bg">#ECFDF5</color>
+    <color name="status_green_border">#A7F3D0</color>
+    <color name="status_green_text">#059669</color>
+
+    <!-- Semantic Status: Amber / Orange (Warning / Suspicious / Spam) -->
+    <color name="status_amber">#F59E0B</color>
+    <color name="status_amber_bg">#FFFBEB</color>
+    <color name="status_amber_border">#FDE68A</color>
+    <color name="status_amber_text">#D97706</color>
+
+    <!-- Semantic Status: Red (Threat / Phishing / Dangerous) -->
+    <color name="status_red">#EF4444</color>
+    <color name="status_red_bg">#FEF2F2</color>
+    <color name="status_red_border">#FECACA</color>
+    <color name="status_red_text">#DC2626</color>
+
+    <!-- Semantic Status: Blue (Forwarded / Info) -->
+    <color name="status_blue">#2563EB</color>
+    <color name="status_blue_bg">#EFF6FF</color>
+    <color name="status_blue_border">#BFDBFE</color>
+    <color name="status_blue_text">#1D4ED8</color>
+
+    <!-- Semantic Status: Gray (Needs Review / Inactive) -->
+    <color name="status_gray">#64748B</color>
+    <color name="status_gray_bg">#F1F5F9</color>
+    <color name="status_gray_border">#CBD5E1</color>
+    <color name="status_gray_text">#475569</color>
+
+    <!-- Navigation -->
+    <color name="nav_selected">#2563EB</color>
+    <color name="nav_unselected">#64748B</color>
+
+    <!-- Wave Decoration -->
+    <color name="wave_pale_blue">#E8F0FE</color>
+    <color name="wave_pale_blue_light">#F0F6FF</color>
+
+    <!-- Legacy aliases for backwards compatibility -->
+    <color name="bg_dark">#F8FAFC</color>
+    <color name="surface_dark">#FFFFFF</color>
+    <color name="surface_light">#F0F6FE</color>
+    <color name="border_color">#E2E8F0</color>
+    <color name="primary_accent">#2563EB</color>
+    <color name="primary_accent_hover">#1D4ED8</color>
+    <color name="indigo_light">#4F46E5</color>
+    <color name="cyan_accent">#0EA5E9</color>
+    <color name="safe_green">#10B981</color>
+    <color name="safe_green_glow">#ECFDF5</color>
+    <color name="warning_orange">#F59E0B</color>
+    <color name="danger_red">#EF4444</color>
+    <color name="text_dim">#64748B</color>
+</resources>

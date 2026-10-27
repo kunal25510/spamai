@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Outer Shield with Soft Drop/Stroke in Royal Blue / Indigo -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:strokeColor="#2563EB"
+        android:strokeWidth="3.5"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M48,10 L78,22 C78,54 48,84 48,84 C48,84 18,54 18,22 Z" />
+
+    <!-- Inner Shield Contour in Bright Royal Blue -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M48,22 L70,31 C70,54 48,74 48,74 C48,74 26,54 26,31 Z" />
+
+    <!-- Crisp Center Check / Protection Mark in Pure White -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M38,48 L45,55 L58,41" />
+</vector>

@@ -1,0 +1,116 @@
+{
+  "domains": {
+    "unstop.news": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 259,
+      "clean_count": 256,
+      "threat_count": 3
+    },
+    "render.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 20,
+      "clean_count": 20,
+      "threat_count": 0
+    },
+    "kaggle.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 40,
+      "clean_count": 40,
+      "threat_count": 0
+    },
+    "railway.app": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 38,
+      "clean_count": 38,
+      "threat_count": 0
+    },
+    "spotify.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 29,
+      "clean_count": 29,
+      "threat_count": 0
+    },
+    "linkedin.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 213,
+      "clean_count": 213,
+      "threat_count": 0
+    },
+    "canva.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 36,
+      "clean_count": 36,
+      "threat_count": 0
+    },
+    "github.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 18,
+      "clean_count": 18,
+      "threat_count": 0
+    },
+    "ippbonline.co.in": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 37,
+      "clean_count": 36,
+      "threat_count": 1
+    },
+    "facebookmail.com": {
+      "first_seen": "2026-10-24T05:05:29.811Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 66,
+      "clean_count": 66,
+      "threat_count": 0
+    },
+    "adobe.com": {
+      "first_seen": "2026-10-24T08:36:24.959Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 49,
+      "clean_count": 49,
+      "threat_count": 0
+    },
+    "discord.com": {
+      "first_seen": "2026-10-24T08:36:24.959Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 23,
+      "clean_count": 23,
+      "threat_count": 0
+    },
+    "quora.com": {
+      "first_seen": "2026-10-24T08:36:24.959Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 16,
+      "clean_count": 0,
+      "threat_count": 16
+    },
+    "rapidapi.com": {
+      "first_seen": "2026-10-24T08:36:24.959Z",
+      "last_seen": "2026-10-24T13:18:16.830Z",
+      "total_seen": 6,
+      "clean_count": 6,
+      "threat_count": 0
+    },
+    "gmail.com": {
+      "first_seen": "2026-10-25T10:03:33.035Z",
+      "last_seen": "2026-10-26T09:08:00.786Z",
+      "total_seen": 39,
+      "clean_count": 34,
+      "threat_count": 5
+    }
+  },
+  "user_rules": {
+    "partner-test.org": {
+      "status": "TRUSTED",
+      "notes": "Acceptance test rule",
+      "updated_at": "2026-10-25T18:16:04.298Z"
+    }
+  }
+}

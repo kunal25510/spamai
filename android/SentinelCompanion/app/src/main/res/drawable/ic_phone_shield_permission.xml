@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Soft circular aura/shadow behind illustration -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M60,60m-52,0a52,52 0,1,1 104,0a52,52 0,1,1 -104,0" />
+
+    <!-- Smartphone Body (Rounded rectangle in Royal Blue / Slate) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#2563EB"
+        android:strokeWidth="3.5"
+        android:pathData="M38,24 L68,24 C72.4,24 76,27.6 76,32 L76,84 C76,88.4 72.4,92 68,92 L38,92 C33.6,92 30,88.4 30,84 L30,32 C30,27.6 33.6,24 38,24 Z" />
+
+    <!-- Phone Speaker Notch -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M48,29 L58,29 C58.6,29 59,29.4 59,30 C59,30.6 58.6,31 58,31 L48,31 C47.4,31 47,30.6 47,30 C47,29.4 47.4,29 48,29 Z" />
+
+    <!-- SMS Message Bubble Inside Screen -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M38,42 L66,42 C67.1,42 68,42.9 68,44 L68,54 C68,55.1 67.1,56 66,56 L44,56 L38,61 L38,44 C38,42.9 38.9,42 40,42 Z" />
+
+    <!-- Text line placeholder in message bubble -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M43,47 L62,47 C62.6,47 63,47.4 63,48 C63,48.6 62.6,49 62,49 L43,49 C42.4,49 42,48.6 42,48 C42,47.4 42.4,47 43,47 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M43,51 L55,51 C55.6,51 56,51.4 56,52 C56,52.6 55.6,53 55,53 L43,53 C42.4,53 42,52.6 42,52 C42,51.4 42.4,51 43,51 Z" />
+
+    <!-- Overlapping Green Security Shield on bottom right -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M76,60 L92,66 C92,84 76,96 76,96 C76,96 60,84 60,66 Z" />
+
+    <!-- Checkmark inside Green Shield -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M68,77 L73,82 L84,71" />
+</vector>

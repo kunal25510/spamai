@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Outer Glow / Shield Outline -->
+    <path
+        android:fillColor="#1E293B"
+        android:strokeColor="#6366F1"
+        android:strokeWidth="3"
+        android:pathData="M48,8 L80,22 C80,56 48,86 48,86 C48,86 16,56 16,22 Z" />
+
+    <!-- Inner Gradient-like Shield Accent -->
+    <path
+        android:fillColor="#312E81"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2"
+        android:pathData="M48,18 L72,28 C72,52 48,76 48,76 C48,76 24,52 24,28 Z" />
+
+    <!-- Center Security Icon (Lock / Check) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M48,32 C43.58,32 40,35.58 40,40 L40,44 L38,44 C36.9,44 36,44.9 36,46 L36,60 C36,61.1 36.9,62 38,62 L58,62 C59.1,62 60,61.1 60,60 L60,46 C60,44.9 59.1,44 58,44 L56,44 L56,40 C56,35.58 52.42,32 48,32 Z M48,35 C50.76,35 53,37.24 53,40 L53,44 L43,44 L43,40 C43,37.24 45.24,35 48,35 Z M48,50 C49.66,50 51,51.34 51,53 C51,54.66 49.66,56 48,56 C46.34,56 45,54.66 45,53 C45,51.34 46.34,50 48,50 Z" />
+</vector>

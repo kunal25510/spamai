@@ -1,100 +1,120 @@
 text,label
-"Hello, your meeting is scheduled for tomorrow at 10 AM.",safe
-Your Amazon order has been shipped and will arrive tomorrow.,safe
-Thank you for your purchase. Your receipt is attached.,safe
-Your electricity bill is ready. You can view it in your account.,safe
-"Hi, can we meet today to discuss the project?",safe
-Your GitHub repository has been updated successfully.,safe
-Your Google Drive storage report is available.,safe
-Your bank statement for this month is ready to view.,safe
-Your flight booking has been confirmed.,safe
-Your college examination timetable has been published.,safe
-"Hi, please find the project report attached for your review.",safe
-Your internship application has been received successfully.,safe
-Your Unstop application has been submitted successfully.,safe
-Your interview is scheduled for Monday at 11 AM.,safe
-Your GitHub pull request has been merged.,safe
-Your Google account security report is available.,safe
-You shared some Google Account data with Kaggle. You're receiving this email because you used Sign in with Google to sign in to Kaggle.,safe
-Security notice: You signed in to your Google Account on a new device.,safe
-"IPPB Adds convenience to your Post Office Savings Account. Customer, Experience the trust of India Post. Enjoy the convenience of IPPB.",safe
-India Post Payments Bank: Link your Post Office Savings Account (POSA) with your IPPB account to make everyday banking easier.,safe
-Certificate Expiring in 7 Days: orbit-strategies.co. This is to notify you that your certificate with common name orbit-strategies.co will expire soon.,safe
-ZeroSSL Notice: Your SSL certificate for orbit-strategies.co will expire in 3 days. Please renew your certificate.,safe
-OTP for Email Verification - MahaSarathi. Your OTP is 654321. This OTP will expire in 5 minutes.,safe
-Aadhaar eKYC Verification Successful - MahaSarathi. Your Aadhaar authentication was processed successfully.,safe
-"Kunal, add Richa Jha as Software Engineer on LinkedIn. Explore opportunities.",safe
-You have 1 new invitation on LinkedIn from someone who reached out.,safe
-12 months of Spotify Premium Standard at ₹799. Listen to offline music without ads.,safe
-Levelup your docs with visual boards easily with Canva Docs.,safe
-Design a wedding card that holds memories. Create custom designs with Adobe Express.,safe
-"Earn stipend up to INR 25,000 per month! Apply now on Unstop.",safe
-New openings based on your profile. Apply now on Unstop.,safe
-More time to get 50% off Pro: learn web development hands-on on Codecademy.,safe
-Discover music and jam with your friends in real-time on Spotify.,safe
-Your monthly mobile bill is now available.,safe
-Your order has been delivered successfully.,safe
-Your train ticket booking is confirmed.,safe
-Your college assignment submission was successful.,safe
-Your password was changed successfully.,safe
-Your package is out for delivery today.,safe
-Your monthly subscription payment was successful.,safe
-Your Microsoft account activity report is ready.,safe
-Your project meeting has been moved to 3 PM.,safe
-Your internship interview feedback is available.,safe
-Your bank statement is ready to download from your account.,safe
-Your flight check-in is now available.,safe
-Your GitHub notification has been received.,safe
-Your Google Drive file was shared with you.,safe
-"Hey, are you free for lunch today?",safe
-Please find the team sync meeting notes attached.,safe
-Don't forget to submit your weekly status update.,safe
-The design mockup has been updated based on your feedback.,safe
-Welcome to our platform! We are excited to have you on board.,safe
-Your appointment with Dr. Smith is confirmed for 2 PM.,safe
-Here is the wifi password for the main office conference room.,safe
-"Document access update Hi Kunal, The document shared with you is waiting for confirmation. Please sign in to your account to confirm access and continue viewing the document. Access document : http://example.com/document",phishing
-Document shared with you: Sign in to your account to confirm access and view document. http://example-view.com/doc,phishing
-You have received a new shared document. Sign in to your account to confirm access immediately. http://login-check.net/document,phishing
-URGENT! Your bank account will be blocked today. Verify your password immediately.,phishing
-Congratulations! You won 50000 rupees. Click here to claim your prize.,phishing
-Your account has been suspended. Login immediately to restore access.,phishing
-Your UPI account needs verification. Send your OTP to avoid suspension.,phishing
-Security alert! Confirm your password and credit card details now.,phishing
-You have won a lottery. Pay a small processing fee to receive your reward.,phishing
-Your email account will be deleted. Click this link immediately to verify.,phishing
-Important! Your payment failed. Enter your banking details to receive a refund.,phishing
-Your package cannot be delivered. Confirm your account and payment information.,phishing
-Final warning! Your account will be permanently closed unless you verify now.,phishing
-Your document is waiting for confirmation. Sign in to view the document. http://fake-login-verify.com,phishing
-We noticed unusual activity on your bank account. Click http://suspicious-verify.com to confirm your password.,phishing
-Your internship has been selected. Pay a registration fee to confirm your position.,phishing
-Your job application requires a small verification payment.,phishing
-Your delivery is on hold. Confirm your payment information to receive the package.,phishing
-Your account security settings need to be updated. Sign in using the link provided.,phishing
-Your refund is ready. Enter your bank details to receive the money.,phishing
-Your payment could not be processed. Confirm your card details to avoid cancellation.,phishing
-Your account verification is pending. Provide your login details to complete verification.,phishing
-Your cloud storage account requires confirmation. Sign in to prevent data loss.,phishing
-Your application has been shortlisted. Complete the verification fee to continue.,phishing
-Your package is waiting at the delivery center. Confirm your details to schedule delivery.,phishing
-Your account access has been restricted. Verify your identity to restore access.,phishing
-Your document cannot be viewed until you sign in and confirm your account.,phishing
-Your payment refund requires your UPI details. Submit them to receive the refund.,phishing
-Your account has unusual login activity. Confirm your password to secure it.,phishing
-Your job offer is ready. Pay the processing charge to receive your appointment letter.,phishing
-Your subscription will be cancelled unless you confirm your payment details.,phishing
-Your mailbox is almost full. Sign in to increase your storage immediately.,phishing
-Your account requires identity verification. Enter your credentials to continue.,phishing
-Your bank account has been temporarily restricted. Verify your identity immediately using the secure link.,phishing
-Your payment account requires urgent verification. Enter your password to prevent suspension.,phishing
-Your account security has been compromised. Confirm your login credentials immediately.,phishing
-Your refund is waiting. Enter your banking information to receive the money.,phishing
-Your parcel is on hold. Pay the outstanding delivery fee using the attached link.,phishing
-Your subscription payment failed. Confirm your card details to avoid cancellation.,phishing
-Security warning: unusual login detected. Verify your password immediately.,phishing
-Final notice: your account will be deleted today unless you confirm your credentials.,phishing
-Your reward is ready. Enter your OTP to claim your cash prize.,phishing
-Your tax refund has been approved. Submit your bank details to receive the payment.,phishing
-Action Required: Click here http://suspicious-link.com/login to reset password.,phishing
-Immediate action required! Your account will be closed in 24 hours.,phishing
+Your Unstop application for Software Engineering Intern has been submitted successfully.,legitimate
+Unstop Competition Alert: Flipkart GRiD 6.0 is live! Register with your college team now.,legitimate
+Congratulations! You have been shortlisted for Round 2 technical assessment on Unstop.,legitimate
+"Earn stipend up to INR 35,000 per month: 15 new internship openings on Unstop matching your profile.",legitimate
+Unstop Hackathon Update: Problem statements are released. Login to your dashboard to review guidelines.,legitimate
+Your college semester examination timetable for Nov-Dec 2026 has been published on student portal.,legitimate
+Assignment submission successful: CS401 Distributed Systems assignment uploaded before deadline.,legitimate
+Professor Sharma scheduled a project review meeting for tomorrow at 2:30 PM in Lab 3.,legitimate
+Campus placement drive schedule for Amazon and TCS has been updated by the training cell.,legitimate
+Your Internshala application for Web Developer Intern has been viewed by the employer.,legitimate
+Security alert: New sign-in to your Google Account from Chrome on Windows.,legitimate
+You shared your Google Account data with Kaggle via Google Sign-In.,legitimate
+Your Google Drive monthly storage summary: 4.2 GB of 15 GB currently used.,legitimate
+GitHub: [antigravity-ide/sentinel] Pull request #14 merged into main branch by kunal.,legitimate
+GitHub security advisory: Dependabot detected 0 vulnerabilities in your repository.,legitimate
+LinkedIn: Richa Jha accepted your invitation to connect. Say hello and congratulate them.,legitimate
+Spotify Premium: Thank you for your monthly subscription payment of ₹119.,legitimate
+Canva: New design assets and templates are available in your shared team folder.,legitimate
+Adobe Creative Cloud: Your billing receipt for Creative Cloud All Apps is available in account portal.,legitimate
+ZeroSSL Certificate Lifecycle Alert: Your SSL certificate for *.example.edu expires in 14 days.,legitimate
+Zoom meeting invitation: Weekly Engineering Standup on Friday at 10:00 AM IST.,legitimate
+Your password was changed successfully on your verified account settings.,legitimate
+IRCTC e-Ticketing: Train ticket booking confirmed for Train 12951 Mumbai Rajdhani Express.,legitimate
+Coursera: Keep going! You are 80% through 'Neural Networks and Deep Learning'.,legitimate
+Codecademy: Weekly streak reminder! You completed 4 coding exercises this week.,legitimate
+HackerRank: Invitation to participate in Developer Skills Coding Challenge 2026.,legitimate
+Slack notification: You were mentioned by Sarah in #project-security.,legitimate
+Notion: Team workspace permissions updated for Sprint 4 Documentation.,legitimate
+Microsoft 365: Your monthly security and activity summary is available in the admin center.,legitimate
+Invoice INV-2026-089 from Sunrise Digital Studio for website redesign project milestones.,legitimate
+Your appointment at Apex Dental Care is confirmed for Tuesday at 4:00 PM with Dr. Patel.,legitimate
+Thank you for ordering with GreenLeaf Organic Bakery! Your fresh sourdough will arrive by 2 PM.,legitimate
+Contract agreement signed by Horizon Architecture for Phase 1 construction blueprint.,legitimate
+Meeting notes and action items from the weekly client sync on project onboarding.,legitimate
+Your car service reservation is confirmed at Metro Automotive Care for Friday 9:00 AM.,legitimate
+Estimate for residential plumbing repair and pipe replacement attached from QuickFix Services.,legitimate
+Welcome to ByteByteGo newsletter: Issue #108 - How Discord stores billions of messages.,legitimate
+Your annual membership renewal for City Fitness Gym was processed successfully.,legitimate
+Quarterly newsletter from Himalayan Trekking Expeditions: Upcoming autumn trails and routes.,legitimate
+Your reservation at Ocean Breeze Seaside Resort has been confirmed. Check-in is at 2:00 PM.,legitimate
+Receipt for office catering order #8491 from Gourmet Express Deli.,legitimate
+Your monthly e-statement for Post Office Savings Account (POSA) is ready to download.,legitimate
+India Post Payments Bank: OTP for transaction authentication is 482910. Valid for 10 minutes.,legitimate
+Income Tax Department: E-filing acknowledgment receipt for Assessment Year 2026-27.,legitimate
+"Your monthly electricity bill for October 2026 is INR 1,420. Due date is Nov 5th.",legitimate
+Passport Seva Kendra: Appointment booked for passport renewal on Monday at 10:30 AM.,legitimate
+HDFC Bank: NetBanking password reset successfully completed from your registered device.,legitimate
+Aadhaar authentication successful for eKYC verification at registered service portal.,legitimate
+State Bank of India: Monthly account statement for savings account ending in 4921.,legitimate
+Huge clearance sale! Up to 85% discount on luxury watches and designer handbags today only.,spam
+Exclusive Casino Bonus! Spin the wheel and get 200 free spins with no deposit required.,spam
+Boost your website ranking to Google Page 1 with our guaranteed SEO backlinks package.,spam
+Lose 15 pounds in 2 weeks with this herbal formula! Clinically proven organic pills.,spam
+Unsolicited: Increase B2B sales leads by 400% with our verified marketing email list.,spam
+Lowest mortgage refinancing rates of the decade! Check your eligibility with no obligation.,spam
+"Get your dream luxury watch at wholesale prices. Limited stock available, shop now.",spam
+Cryptocurrency auto-trading robot generates $500 daily on autopilot. Register free today.,spam
+"Hot deals on refurbished electronics! Flat 50% discount on laptops, phones, and tablets.",spam
+"Grow your Instagram followers fast! Real active followers starting at just $5 per 1,000.",spam
+Special promotional message: Earn rewards on every fuel purchase with our discount card.,spam
+"Blast your music to 10,000 Spotify playlist curators. Guaranteed plays and streams.",spam
+Affordable term life insurance quotes starting from $15 per month. Compare 20 insurers.,spam
+End of season super sale! Buy 1 get 2 free on all fashion apparel and footwear.,spam
+Make money working from home completing 20-minute consumer opinion surveys online.,spam
+Bulk SMS and WhatsApp marketing services for your business at lowest rates in the market.,spam
+Private luxury yacht rentals in Goa at discount packages for corporate outings and parties.,spam
+Unbeatable web hosting deals: Unlimited SSD storage and free domain name for only $1/month.,spam
+Get pre-approved for an instant personal loan of up to 10 Lakhs with zero documentation.,spam
+"Exclusive invitation to VIP poker tournament with $50,000 guaranteed prize pool this weekend.",spam
+Clearance blowout: High quality replica sunglasses and sneakers at 90% below retail.,spam
+Tired of hair loss? Try our breakthrough peptide regrowth spray. Results guaranteed.,spam
+"Custom promotional merchandise, printed mugs and pens for your company at wholesale price.",spam
+Instant car insurance quote in 2 minutes. Save hundreds every year on your premium.,spam
+"Flash deal: 30,000 royalty free stock photos and vector graphics for a one-time fee of $19.",spam
+URGENT: Your bank account has been locked due to suspicious activity. Verify your password immediately.,phishing
+Security Alert: Your Google Account will be terminated within 24 hours. Sign in at http://fake-google-login.xyz to cancel.,phishing
+Action Required: Click here http://suspicious-verify.com/login to reset your corporate password immediately.,phishing
+"You have won 50,000 GBP in the International Lottery! Send your bank details and processing fee to claim.",phishing
+Your document has been locked. Sign in with your email and password to view the document: http://192.168.1.10/doc,phishing
+Your UPI account will be permanently deactivated today. Reply with your OTP and UPI PIN to restore.,phishing
+"Your internship at TechCorp requires a mandatory refundable registration fee of INR 3,000 to issue offer letter.",phishing
+Final Notice: Your mailbox storage is full. Verify your login credentials at http://mail-update.top to avoid losing emails.,phishing
+PayPal Security: Unauthorized charge of $499 detected. Click http://paypal-verify-account.click to cancel.,phishing
+Netflix Payment Failed: Your subscription will be cancelled today unless you update card and CVV immediately.,phishing
+"Tax Refund Department: You have an unclaimed tax refund of ₹45,200. Submit your net banking password to receive credit.",phishing
+Package Delivery on hold: Outstanding customs fee of $2.99 required. Pay via http://dhl-express-track.xyz,phishing
+Microsoft Office 365: Your password expires today. Keep your current password by confirming it here.,phishing
+HR Payroll Update: Please review salary revision memo. Enter your employee portal username and password.,phishing
+Your Apple ID has been locked for security reasons. Confirm your identity and billing card at http://appleid-unlock.top,phishing
+"Dear customer, your debit card is blocked. Click http://sbi-kyc-update.buzz to complete mandatory PAN link.",phishing
+"Unusual login attempt from Moscow, Russia. If this wasn't you, sign in immediately to protect your credentials.",phishing
+"Beneficiary Notice: Fund transfer of $2,500,000 waiting for release. Provide your passport copy and PIN.",phishing
+Amazon Security: Order #202-9182 flagged for fraud. Confirm your password and full 16-digit card number.,phishing
+Job Offer Selection: Selected as Remote Assistant! Pay upfront equipment shipping charge to confirm.,phishing
+Urgent: Prosecution notice issued against your IP. Pay settlement penalty within 12 hours to avoid arrest.,phishing
+Crypto Wallet Security: Seed phrase verification required. Enter your 12-word recovery phrase to unfreeze assets.,phishing
+Dropbox: 3 confidential legal files shared with you. Sign in with your email provider to view.,phishing
+"Student Scholarship Award: You have been awarded ₹50,000 scholarship. Pay ₹1,500 application stamp fee to claim.",phishing
+Instagram Copyright Infringement: Your account will be deleted in 24 hours unless you appeal via http://ig-appeal.cf,phishing
+"Hello, I am reaching out regarding an urgent business proposal. Please reply to my private personal email address.",suspicious
+Invoice INV-8921 attached from Global Consulting Services. Please verify billing figures before Friday.,suspicious
+Important update regarding your recent inquiry. Please click the shortened link http://bit.ly/3xY9k2 to review notes.,suspicious
+"Inquiry from potential client: We would like to discuss a $20,000 software contract. Call this private number.",suspicious
+Notice of domain registration renewal for your registered website from independent registrar agent.,suspicious
+Confidential partnership inquiry from Apex Capital Holdings regarding strategic investment opportunity.,suspicious
+Please review the attached contract draft and let us know if your legal team approves the clauses.,suspicious
+Reminder: Survey on remote developer productivity. Fill out the form to enter the $100 gift card raffle.,suspicious
+Account notification: Changes were recently made to your secondary notification settings from an unknown location.,suspicious
+Urgent request from supplier: Please confirm if our revised wire transfer banking coordinates were received.,suspicious
+Request for quotation: Please provide wholesale pricing for the products listed in the shared cloud drive link.,suspicious
+"Greetings, are you available today for a brief offline phone call regarding an internal matter?",suspicious
+Notice of policy update for third-party contractors and external vendors effective next month.,suspicious
+Feedback requested regarding your experience with our platform services earlier this quarter.,suspicious
+Undelivered message notification: A message sent from your workstation could not be delivered to recipient.,suspicious
+Urgent: Please check the revised delivery schedule attached for project Phase 2 milestone.,suspicious
+Invitation to join an invitation-only executive advisory panel on artificial intelligence trends.,suspicious
+Unrecognized sign-in attempt reported on legacy service. Please review your active sessions.,suspicious
+Contract renewal notice: Your annual software maintenance agreement will lapse at the end of the month.,suspicious
+Information request regarding your availability to speak at the upcoming regional technology symposium.,suspicious

@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <!-- Glowing Outer Circle -->
+    <path
+        android:fillColor="#0D2E24"
+        android:strokeColor="#10B981"
+        android:strokeWidth="3"
+        android:pathData="M40,6 C58.78,6 74,21.22 74,40 C74,58.78 58.78,74 40,74 C21.22,74 6,58.78 6,40 C6,21.22 21.22,6 40,6 Z" />
+
+    <!-- Bold Green Checkmark inside -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#10B981"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M26,41 L35,50 L54,30" />
+</vector>

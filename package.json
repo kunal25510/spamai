@@ -1,11 +1,18 @@
 {
   "name": "personal-security-agent",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "npm run start-all",
+    "start-all": "concurrently \"npm run frontend\" \"npm run backend\" \"npm run ai\"",
+    "start:all": "npm run start-all",
+    "start all": "npm run start-all",
+    "build": "npm --prefix frontend run build",
+    "test": "node tests/test_backend_fallback.js && node tests/test_sms_backend.js && node tests/test_connection_independence.js && node tests/test_audit_acceptance.js && node tests/test_multiuser_isolation.js && node tests/test_review_corrections.js && node tests/test_real_scam_detection.js && node tests/test_scam_checker.js && python -X utf8 tests/test_sentinel_pipeline.py && python -X utf8 tests/test_sms_ai.py",
+    "retrain": "python ai/train_model.py",
     "frontend": "npm --prefix frontend run dev",
     "backend": "node backend/server.js",
-    "ai": "python -X utf8 ai/ai_server.py",
-    "start-all": "concurrently \"npm run frontend\" \"npm run backend\" \"npm run ai\""
+    "ai": "python -X utf8 ai/ai_server.py"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.5",

@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+    <!-- Secondary soft curved wave layer -->
+    <path
+        android:fillColor="#F0F6FF"
+        android:pathData="M0,70 C90,110 180,30 270,75 C310,95 340,90 360,80 L360,160 L0,160 Z" />
+
+    <!-- Primary soft pale blue wave layer -->
+    <path
+        android:fillColor="#E6EFFE"
+        android:pathData="M0,95 C80,50 190,130 280,85 C320,65 345,70 360,75 L360,160 L0,160 Z" />
+</vector>

@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="88dp"
+    android:height="88dp"
+    android:viewportWidth="88"
+    android:viewportHeight="88">
+    <!-- Cyber Security Agent / Avatar with Glow -->
+    <path
+        android:fillColor="#1E293B"
+        android:strokeColor="#818CF8"
+        android:strokeWidth="2.5"
+        android:pathData="M44,14 C32,14 26,24 26,36 C26,46 32,54 44,54 C56,54 62,46 62,36 C62,24 56,14 44,14 Z" />
+
+    <!-- Hood/Face Mask -->
+    <path
+        android:fillColor="#0F172A"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2"
+        android:pathData="M34,36 L54,36 L52,46 L36,46 Z" />
+
+    <!-- Glowing Cyber Visor -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M37,39 L51,39 C52.1,39 53,39.9 53,41 L53,41 C53,42.1 52.1,43 51,43 L37,43 C35.9,43 35,42.1 35,41 L35,41 C35,39.9 35.9,39 37,39 Z" />
+
+    <!-- Torso / Shoulders with Cyber Lines -->
+    <path
+        android:fillColor="#131B2E"
+        android:strokeColor="#6366F1"
+        android:strokeWidth="2.5"
+        android:pathData="M18,74 C18,60 28,56 44,56 C60,56 70,60 70,74 L18,74 Z" />
+
+    <!-- Center SMS emblem -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M44,61 C40,61 38,63 38,66 C38,69 40,71 44,71 C48,71 50,69 50,66 C50,63 48,61 44,61 Z" />
+</vector>

@@ -1,0 +1,944 @@
+[
+  {
+    "emailId": "test_123",
+    "feedbackType": "CORRECT",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-24T04:43:41.946Z"
+  },
+  {
+    "emailId": "test_msg_999",
+    "feedbackType": "CORRECT",
+    "notes": "Verification test for CORRECT",
+    "emailSummary": {
+      "from": "test@example.com",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-24T05:22:20.080Z"
+  },
+  {
+    "emailId": "test_msg_999",
+    "feedbackType": "FALSE_POSITIVE",
+    "notes": "Verification test for FALSE_POSITIVE",
+    "emailSummary": {
+      "from": "test@example.com",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-24T05:22:20.091Z"
+  },
+  {
+    "emailId": "test_msg_999",
+    "feedbackType": "MISSED_PHISHING",
+    "notes": "Verification test for MISSED_PHISHING",
+    "emailSummary": {
+      "from": "test@example.com",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-24T05:22:20.097Z"
+  },
+  {
+    "emailId": "test_msg_999",
+    "feedbackType": "REQUEST_REVIEW",
+    "notes": "Verification test for REQUEST_REVIEW",
+    "emailSummary": {
+      "from": "test@example.com",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-24T05:22:20.101Z"
+  },
+  {
+    "emailId": "sms_23ec5fcd15a0133f",
+    "feedbackType": "CORRECT",
+    "notes": "User marked as CORRECT via detail drawer",
+    "emailSummary": {
+      "from": "JD-BFLFIN-P",
+      "subject": "SMS from JD-BFLFIN-P",
+      "category": "NEEDS REVIEW",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-24T12:52:04.101Z"
+  },
+  {
+    "emailId": "sms_dadcc3a7935c866a",
+    "feedbackType": "CORRECT",
+    "notes": "User marked as CORRECT via detail drawer",
+    "emailSummary": {
+      "from": "VK-IDFCFB-P",
+      "subject": "SMS from VK-IDFCFB-P",
+      "category": "NEEDS REVIEW",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-25T09:47:55.825Z"
+  },
+  {
+    "emailId": "sms_dadcc3a7935c866a",
+    "feedbackType": "CORRECT",
+    "notes": "User marked as CORRECT via detail drawer",
+    "emailSummary": {
+      "from": "VK-IDFCFB-P",
+      "subject": "SMS from VK-IDFCFB-P",
+      "category": "NEEDS REVIEW",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-25T09:49:07.496Z"
+  },
+  {
+    "emailId": "1a161a3ae835184c",
+    "feedbackType": "CORRECT",
+    "notes": "User marked as CORRECT via detail drawer",
+    "emailSummary": {
+      "from": "IPPB Information <information@ippbonline.co.in>",
+      "subject": "More Security. More Benefits. Upgrade to IPPB Surakshit Savings Account !",
+      "category": "NEEDS REVIEW",
+      "source": "GMAIL"
+    },
+    "submittedAt": "2026-10-25T09:49:53.401Z"
+  },
+  {
+    "messageId": "sms_bfb9326ddb22f872",
+    "emailId": "sms_bfb9326ddb22f872",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:06:37.415Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792922797420",
+    "emailId": "gmail_msg_test_1792922797420",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:06:37.423Z"
+  },
+  {
+    "messageId": "sms_0296ba4f1c865696",
+    "emailId": "sms_0296ba4f1c865696",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:07:34.639Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792922854645",
+    "emailId": "gmail_msg_test_1792922854645",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:07:34.647Z"
+  },
+  {
+    "messageId": "sms_0296ba4f1c865696",
+    "emailId": "sms_0296ba4f1c865696",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:07:34.653Z"
+  },
+  {
+    "messageId": "sms_6f2fb44aa88ee8b1",
+    "emailId": "sms_6f2fb44aa88ee8b1",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:08:02.477Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792922882482",
+    "emailId": "gmail_msg_test_1792922882482",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:08:02.484Z"
+  },
+  {
+    "messageId": "sms_6f2fb44aa88ee8b1",
+    "emailId": "sms_6f2fb44aa88ee8b1",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:08:02.490Z"
+  },
+  {
+    "messageId": "sms_fb163bc40ed384d2",
+    "emailId": "sms_fb163bc40ed384d2",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:08:42.749Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792922922755",
+    "emailId": "gmail_msg_test_1792922922755",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:08:42.756Z"
+  },
+  {
+    "messageId": "sms_fb163bc40ed384d2",
+    "emailId": "sms_fb163bc40ed384d2",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:08:42.762Z"
+  },
+  {
+    "messageId": "sms_4d9c0273e82ae426",
+    "emailId": "sms_4d9c0273e82ae426",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by user review",
+    "emailSummary": {
+      "from": "JD-BFLFIN-P",
+      "subject": "SMS from JD-BFLFIN-P",
+      "category": "LEGITIMATE",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-25T10:13:12.598Z"
+  },
+  {
+    "messageId": "1a161a3ae835184c",
+    "emailId": "1a161a3ae835184c",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by user review",
+    "emailSummary": {
+      "from": "IPPB Information <information@ippbonline.co.in>",
+      "subject": "More Security. More Benefits. Upgrade to IPPB Surakshit Savings Account !",
+      "category": "LEGITIMATE",
+      "source": "GMAIL"
+    },
+    "submittedAt": "2026-10-25T10:13:30.988Z"
+  },
+  {
+    "messageId": "sms_4f8bc9939d860401",
+    "emailId": "sms_4f8bc9939d860401",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:33:42.390Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792924422395",
+    "emailId": "gmail_msg_test_1792924422395",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:33:42.397Z"
+  },
+  {
+    "messageId": "sms_4f8bc9939d860401",
+    "emailId": "sms_4f8bc9939d860401",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:33:42.404Z"
+  },
+  {
+    "messageId": "sms_a521970886ed249c",
+    "emailId": "sms_a521970886ed249c",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:49:01.171Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792925341177",
+    "emailId": "gmail_msg_test_1792925341177",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:49:01.178Z"
+  },
+  {
+    "messageId": "sms_a521970886ed249c",
+    "emailId": "sms_a521970886ed249c",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:49:01.185Z"
+  },
+  {
+    "messageId": "sms_32d8acab20b1791a",
+    "emailId": "sms_32d8acab20b1791a",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T10:53:38.984Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792925618988",
+    "emailId": "gmail_msg_test_1792925618988",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T10:53:38.990Z"
+  },
+  {
+    "messageId": "sms_32d8acab20b1791a",
+    "emailId": "sms_32d8acab20b1791a",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T10:53:39.011Z"
+  },
+  {
+    "messageId": "sms_95cd2e26307f10d5",
+    "emailId": "sms_95cd2e26307f10d5",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T11:13:05.821Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792926785826",
+    "emailId": "gmail_msg_test_1792926785826",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T11:13:05.831Z"
+  },
+  {
+    "messageId": "sms_95cd2e26307f10d5",
+    "emailId": "sms_95cd2e26307f10d5",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T11:13:05.838Z"
+  },
+  {
+    "messageId": "1a1727e7913fc79a",
+    "emailId": "1a1727e7913fc79a",
+    "source": "GMAIL",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "Classified as PHISHING by security review",
+    "emailSummary": {
+      "from": "kunal ambelkar <kunalambelkar91@gmail.com>",
+      "subject": "URGENT: Your Account Has Been Suspended!",
+      "category": "PHISHING",
+      "source": "GMAIL"
+    },
+    "submittedAt": "2026-10-25T11:17:25.834Z"
+  },
+  {
+    "messageId": "1a172839284b5171",
+    "emailId": "1a172839284b5171",
+    "source": "GMAIL",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "Classified as PHISHING by security review",
+    "emailSummary": {
+      "from": "kunal ambelkar <kunalambelkar91@gmail.com>",
+      "subject": "A document has been shared with you",
+      "category": "PHISHING",
+      "source": "GMAIL"
+    },
+    "submittedAt": "2026-10-25T11:17:34.416Z"
+  },
+  {
+    "messageId": "sms_3adb66e59aacfa3a",
+    "emailId": "sms_3adb66e59aacfa3a",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T11:26:14.848Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792927574853",
+    "emailId": "gmail_msg_test_1792927574853",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T11:26:14.854Z"
+  },
+  {
+    "messageId": "sms_3adb66e59aacfa3a",
+    "emailId": "sms_3adb66e59aacfa3a",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T11:26:14.860Z"
+  },
+  {
+    "messageId": "sms_11d0031aafdf9644",
+    "emailId": "sms_11d0031aafdf9644",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T11:30:46.074Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792927846078",
+    "emailId": "gmail_msg_test_1792927846078",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T11:30:46.079Z"
+  },
+  {
+    "messageId": "sms_11d0031aafdf9644",
+    "emailId": "sms_11d0031aafdf9644",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T11:30:46.085Z"
+  },
+  {
+    "messageId": "sms_e4ef01fc923bb016",
+    "emailId": "sms_e4ef01fc923bb016",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T11:35:58.857Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792928158864",
+    "emailId": "gmail_msg_test_1792928158864",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T11:35:58.866Z"
+  },
+  {
+    "messageId": "sms_e4ef01fc923bb016",
+    "emailId": "sms_e4ef01fc923bb016",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T11:35:58.872Z"
+  },
+  {
+    "messageId": "sms_ec536a832257b0e0",
+    "emailId": "sms_ec536a832257b0e0",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:01:04.888Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792947664892",
+    "emailId": "gmail_msg_test_1792947664892",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:01:04.895Z"
+  },
+  {
+    "messageId": "sms_ec536a832257b0e0",
+    "emailId": "sms_ec536a832257b0e0",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:01:04.908Z"
+  },
+  {
+    "messageId": "sms_c441a8957f781d43",
+    "emailId": "sms_c441a8957f781d43",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:01:28.906Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792947688910",
+    "emailId": "gmail_msg_test_1792947688910",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:01:28.912Z"
+  },
+  {
+    "messageId": "sms_c441a8957f781d43",
+    "emailId": "sms_c441a8957f781d43",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:01:28.919Z"
+  },
+  {
+    "messageId": "sms_fe244f5c773bf3a8",
+    "emailId": "sms_fe244f5c773bf3a8",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:11:57.865Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792948317869",
+    "emailId": "gmail_msg_test_1792948317869",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:11:57.871Z"
+  },
+  {
+    "messageId": "sms_fe244f5c773bf3a8",
+    "emailId": "sms_fe244f5c773bf3a8",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:11:57.879Z"
+  },
+  {
+    "messageId": "sms_c3f2f80fd3f7d03a",
+    "emailId": "sms_c3f2f80fd3f7d03a",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by security review",
+    "emailSummary": {
+      "from": "JK-UNIONB-S",
+      "subject": "SMS from JK-UNIONB-S",
+      "category": "LEGITIMATE",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-25T17:33:41.200Z"
+  },
+  {
+    "messageId": "1a1727e7913fc79a",
+    "emailId": "1a1727e7913fc79a",
+    "source": "GMAIL",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "Classified as PHISHING by security review",
+    "emailSummary": {
+      "from": "kunal ambelkar <kunalambelkar91@gmail.com>",
+      "subject": "URGENT: Your Account Has Been Suspended!",
+      "category": "PHISHING",
+      "source": "GMAIL"
+    },
+    "submittedAt": "2026-10-25T17:35:20.702Z"
+  },
+  {
+    "messageId": "sms_0c0897994fbe1e48",
+    "emailId": "sms_0c0897994fbe1e48",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:38:36.930Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792949916935",
+    "emailId": "gmail_msg_test_1792949916935",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:38:36.937Z"
+  },
+  {
+    "messageId": "sms_0c0897994fbe1e48",
+    "emailId": "sms_0c0897994fbe1e48",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:38:36.942Z"
+  },
+  {
+    "messageId": "sms_f592cdc273fe7d3d",
+    "emailId": "sms_f592cdc273fe7d3d",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:44:32.682Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792950272687",
+    "emailId": "gmail_msg_test_1792950272687",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:44:32.689Z"
+  },
+  {
+    "messageId": "sms_f592cdc273fe7d3d",
+    "emailId": "sms_f592cdc273fe7d3d",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:44:32.695Z"
+  },
+  {
+    "messageId": "sms_e4a4f320095de445",
+    "emailId": "sms_e4a4f320095de445",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T17:52:38.080Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792950758085",
+    "emailId": "gmail_msg_test_1792950758085",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T17:52:38.087Z"
+  },
+  {
+    "messageId": "sms_e4a4f320095de445",
+    "emailId": "sms_e4a4f320095de445",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T17:52:38.095Z"
+  },
+  {
+    "messageId": "sms_c8635780442e6097",
+    "emailId": "sms_c8635780442e6097",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T18:06:26.589Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792951586596",
+    "emailId": "gmail_msg_test_1792951586596",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T18:06:26.599Z"
+  },
+  {
+    "messageId": "sms_c8635780442e6097",
+    "emailId": "sms_c8635780442e6097",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T18:06:26.606Z"
+  },
+  {
+    "messageId": "sms_0872028c292b58dc",
+    "emailId": "sms_0872028c292b58dc",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "BankAlert",
+      "subject": "SMS from BankAlert",
+      "category": "LEGITIMATE"
+    },
+    "submittedAt": "2026-10-25T18:16:09.522Z"
+  },
+  {
+    "messageId": "gmail_msg_test_1792952169526",
+    "emailId": "gmail_msg_test_1792952169526",
+    "source": "GMAIL",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "",
+    "emailSummary": {
+      "from": "alerts@security.test",
+      "subject": "Suspicious activity notice",
+      "category": "NEEDS REVIEW"
+    },
+    "submittedAt": "2026-10-25T18:16:09.528Z"
+  },
+  {
+    "messageId": "sms_0872028c292b58dc",
+    "emailId": "sms_0872028c292b58dc",
+    "source": "SMS",
+    "feedbackType": "MARK_PHISHING",
+    "targetCategory": "PHISHING",
+    "notes": "",
+    "emailSummary": {},
+    "submittedAt": "2026-10-25T18:16:09.533Z"
+  },
+  {
+    "messageId": "sms_134e276479d83b5e",
+    "emailId": "sms_134e276479d83b5e",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by security review",
+    "emailSummary": {
+      "from": "JK-UNIONB-S",
+      "subject": "SMS from JK-UNIONB-S",
+      "category": "LEGITIMATE",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-25T18:21:12.578Z"
+  },
+  {
+    "messageId": "sms_af5f1d8499aa4b4c",
+    "emailId": "sms_af5f1d8499aa4b4c",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by security review",
+    "emailSummary": {
+      "from": "JK-UNIONB-S",
+      "subject": "SMS from JK-UNIONB-S",
+      "category": "LEGITIMATE",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-26T03:20:23.527Z"
+  },
+  {
+    "messageId": "sms_1a1ac25723c5b107",
+    "emailId": "sms_1a1ac25723c5b107",
+    "source": "SMS",
+    "feedbackType": "MARK_LEGITIMATE",
+    "targetCategory": "LEGITIMATE",
+    "notes": "Classified as LEGITIMATE by security review",
+    "emailSummary": {
+      "from": "JK-UNIONB-S",
+      "subject": "SMS from JK-UNIONB-S",
+      "category": "LEGITIMATE",
+      "source": "SMS"
+    },
+    "submittedAt": "2026-10-26T04:05:28.710Z"
+  }
+]
